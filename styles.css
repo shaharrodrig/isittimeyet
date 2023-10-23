@@ -49,16 +49,11 @@ p {
     font-size: 0.8em;
 }
 
-.question {
+.question, .answer {
     opacity: 0;
     animation: fadeIn ease 1s forwards 0.5s;
 }
 
-.answer {
-    opacity: 0;
-    transform: scale(0);
-    animation: popIn ease-out 0.5s forwards 2s;
-}
 
 @keyframes fadeIn {
     to {
