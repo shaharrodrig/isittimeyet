@@ -15,6 +15,7 @@ body {
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    position: relative;
 }
 
 .content {
@@ -28,7 +29,6 @@ body {
 }
 
 h1 {
-    font-family: 'Noto Serif', serif;
     color: #ffffff;
     margin-bottom: 10px;
     font-size: 2em;
@@ -40,3 +40,35 @@ p {
     font-size: 1.5em;
 }
 
+.counter {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #eeeeee;
+    font-size: 0.8em;
+}
+
+.question {
+    opacity: 0;
+    animation: fadeIn ease 1s forwards 0.5s;
+}
+
+.answer {
+    opacity: 0;
+    transform: scale(0);
+    animation: popIn ease-out 0.5s forwards 2s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0);
+    }
+    80% {
+        transform: scale(
