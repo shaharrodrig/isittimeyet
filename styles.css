@@ -1,6 +1,6 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1a;
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,11 +10,11 @@ body {
 }
 
 .container {
-    background-color: #ffffff;
+    background-color: #333333;
     padding: 40px;
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .content {
@@ -23,18 +23,19 @@ body {
 
 .separator {
     height: 1px;
-    background-color: #0033a0;
+    background-color: #eeeeee;
     margin: 20px 0;
 }
 
 h1 {
-    color: #0033a0;
+    font-family: 'Indie Flower', cursive;
+    color: #ffffff;
     margin-bottom: 10px;
     font-size: 2em;
 }
 
 p {
-    color: #0033a0;
+    color: #eeeeee;
     margin-top: 10px;
     font-size: 1.5em;
 }
