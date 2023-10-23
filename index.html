@@ -3,7 +3,7 @@
 <head>
     <title>Is It Time Yet?</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -16,6 +16,15 @@
             <h1>🇮🇱 האם זה כבר הזמן? 🇮🇱</h1>
             <p>לא</p>
         </div>
+        <div id="counter" class="counter"></div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        let visits = localStorage.getItem('visits') || 0;
+        visits++;
+        localStorage.setItem('visits', visits);
+        document.getElementById('counter').textContent = `Visitors count = ${visits}`;
+      });
+    </script>
 </body>
 </html>
