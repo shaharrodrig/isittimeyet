@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Serif', serif;
     background-color: #1a1a1a;
     margin: 0;
     padding: 0;
@@ -28,7 +28,7 @@ body {
 }
 
 h1 {
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Noto Serif', serif;
     color: #ffffff;
     margin-bottom: 10px;
     font-size: 2em;
@@ -40,11 +40,3 @@ p {
     font-size: 1.5em;
 }
 
-.counter {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    color: #eeeeee;
-    font-size: 0.8em;
-}
