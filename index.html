@@ -8,7 +8,7 @@
 <body>
     <div class="container">
         <div class="content">
-            <h1>🇮🇱 Is it time yet? 🇮🇱</h1>
+            <h1>🇮🇱 IS IT TIME YET? 🇮🇱</h1>
             <p>No</p>
         </div>
         <div class="separator"></div>
@@ -23,7 +23,7 @@
         let visits = localStorage.getItem('visits') || 0;
         visits++;
         localStorage.setItem('visits', visits);
-        document.getElementById('counter').textContent = `Visitors count = ${visits}`;
+        document.getElementById('counter').textContent = `You are the ${visits}th Visitor! Hurray!`;
       });
     </script>
 </body>
