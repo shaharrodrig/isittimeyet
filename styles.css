@@ -39,3 +39,12 @@ p {
     margin-top: 10px;
     font-size: 1.5em;
 }
+
+.counter {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #eeeeee;
+    font-size: 0.8em;
+}
