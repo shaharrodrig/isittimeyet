@@ -67,6 +67,13 @@ p.answer {
     opacity: 1;
 }
 
+.tooltip-icon {
+    font-size: 10px; /* adjust size */
+    color: #aaa; /* make it subtle */
+    vertical-align: top;
+    margin-left: 5px; /* spacing */
+}
+
 
 /* Animations */
 @keyframes fadeIn {
