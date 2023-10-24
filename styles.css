@@ -1,55 +1,43 @@
+/* General styling */
 body {
-    font-family: 'Noto Serif', serif;
-    background-color: #1a1a1a;
-    margin: 0;
-    padding: 0;
+    background-color: #121212;
+    font-family: "Noto Sans", sans-serif;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
 .container {
-    background-color: #333333;
-    padding: 40px;
-    border-radius: 8px;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    position: relative;
+    padding: 20px;
+    background-color: #444;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.content {
+.lang-box {
+    background-color: #444444;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h1.question {
+    font-size: 36px;
     margin-bottom: 20px;
+    animation: fadeIn 2s ease;
 }
 
-.separator {
-    height: 1px;
-    background-color: #eeeeee;
-    margin: 20px 0;
+p.answer {
+    font-size: 24px;
+    animation: fadeInAnswers 4s ease;
 }
 
-h1 {
-    color: #ffffff;
-    margin-bottom: 10px;
-    font-size: 2em;
-}
-
-p {
-    color: #eeeeee;
-    margin-top: 10px;
-    font-size: 1.5em;
-}
-
-.counter {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    color: #eeeeee;
-    font-size: 0.8em;
-}
-
-
+/* Tooltip styles */
 .tooltip {
     position: relative;
     display: inline-block;
@@ -59,6 +47,7 @@ p {
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 250px;
+    font-size: 14px;
     background-color: #444;
     color: #fff;
     text-align: center;
@@ -66,7 +55,7 @@ p {
     padding: 8px;
     position: absolute;
     z-index: 1;
-    bottom: 125%; /* Position above */
+    bottom: 125%;
     left: 50%;
     margin-left: -125px;
     opacity: 0;
@@ -79,21 +68,39 @@ p {
 }
 
 
-.question, .answer {
-    opacity: 0;
-    animation: fadeIn ease 1s forwards 0.5s;
-}
-
-
+/* Animations */
 @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
     to {
         opacity: 1;
     }
 }
 
-@keyframes popIn {
-    0% {
-        transform: scale(0);
+@keyframes fadeInAnswers {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
     }
-    80% {
-        transform: scale(
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Compatibility */
+@media only screen and (max-width: 768px) {
+    h1.question {
+        font-size: 24px;
+    }
+
+    p.answer {
+        font-size: 20px;
+    }
+
+    .tooltip .tooltiptext {
+        width: 200px;
+        font-size: 12px;
+    }
+}
