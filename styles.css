@@ -46,6 +46,7 @@ p.answer {
 
 .tooltip .tooltiptext {
     visibility: hidden;
+    opacity: 0;
     width: 250px;
     font-size: 14px;
     background-color: #444;
@@ -58,22 +59,25 @@ p.answer {
     bottom: 125%;
     left: 50%;
     margin-left: -125px;
-    opacity: 0;
     transition: opacity 0.3s;
 }
 
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-}
-
 .tooltip-icon {
-    font-size: 10px; /* adjust size */
-    color: #aaa; /* make it subtle */
-    vertical-align: top;
-    margin-left: 5px; /* spacing */
+    font-size: 14px;
+    color: #aaa;
+    vertical-align: middle;
+    margin-left: 5px;
 }
 
+/* Counter styles */
+.counter {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+}
 
 /* Animations */
 @keyframes fadeIn {
