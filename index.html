@@ -18,7 +18,34 @@
             <h1 class="question">🇮🇱 האם זה כבר הזמן? 🇮🇱 <span class="tooltip"><i class="tooltip-icon">ℹ️</i><span class="tooltiptext">*זמן לדבר פוליטיקה ולהחליף את הממשלה</span></h1>
             <p class="answer">לא</p>
         </div>
-        <div id="counter" class="counter"></div>
+        <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const tooltips = document.querySelectorAll('.tooltip');
+
+    tooltips.forEach((tooltip) => {
+        tooltip.addEventListener('mouseenter', function() {
+            this.querySelector('.tooltiptext').style.visibility = 'visible';
+            this.querySelector('.tooltiptext').style.opacity = 1;
+        });
+
+        tooltip.addEventListener('mouseleave', function() {
+            this.querySelector('.tooltiptext').style.visibility = 'hidden';
+            this.querySelector('.tooltiptext').style.opacity = 0;
+        });
+
+        tooltip.addEventListener('touchstart', function() {
+            const tooltipText = this.querySelector('.tooltiptext');
+            if (tooltipText.style.visibility === 'visible') {
+                tooltipText.style.visibility = 'hidden';
+                tooltipText.style.opacity = 0;
+            } else {
+                tooltipText.style.visibility = 'visible';
+                tooltipText.style.opacity = 1;
+            }
+        });
+    });
+});
+    </script>
     </div>
 </body>
 </html>
