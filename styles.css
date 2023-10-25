@@ -115,3 +115,21 @@ p.answer {
         font-size: 12px;
     }
 }
+
+@media only screen and (max-width: 320px) {
+    h1.question {
+        font-size: 28px;
+    }
+
+    p.answer {
+        font-size: 24px;
+    }
+
+    .tooltip .tooltiptext {
+        font-size: 16px;
+    }
+
+    .tooltip-icon {
+        font-size: 16px;
+    }
+}
