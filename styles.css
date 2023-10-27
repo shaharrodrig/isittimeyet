@@ -1,8 +1,7 @@
 /* General styling */
 body {
     background-color: #121212;
-    font-family: "Noto Sans", sans-serif;
-    color: white;
+    font-family: 'Alef', sans-serif;    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
