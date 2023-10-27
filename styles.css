@@ -115,6 +115,12 @@ p.answer {
     }
 }
 
+.top-gif {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
 @media only screen and (max-width: 320px) {
     h1.question {
         font-size: 28px;
@@ -128,6 +134,7 @@ p.answer {
         font-size: 16px;
     }
 
+    
     .tooltip-icon {
         font-size: 16px;
     }
