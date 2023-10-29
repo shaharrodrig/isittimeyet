@@ -84,5 +84,29 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
+    <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+    // Example array of random sentences
+    const sentences = [
+        "לפי עמית סגל:",
+        "לפי טלי גוטליב:",
+        "לפי שרה נתניהו:",
+        "לפי ינון מגל:"
+        // Add as many sentences as you like
+    ];
+
+    // Function to get a random sentence
+    function getRandomSentence() {
+        return sentences[Math.floor(Math.random() * sentences.length)];
+    }
+
+    // Set random sentences for all elements with the 'random-he-sentence' class
+    document.querySelectorAll('.random-he-sentence').forEach(function(elem) {
+        elem.textContent = getRandomSentence();
+    });
+});
+</script>
+    
 </body>
 </html>
