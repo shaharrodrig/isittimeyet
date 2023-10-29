@@ -1,4 +1,7 @@
 /* General styling */
+
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
 body {
     background-color: #121212;
     font-family: 'Alef', sans-serif;    color: white;
@@ -67,6 +70,15 @@ p.answer {
     vertical-align: top;
     margin-left: 5px;
 }
+
+.random-sentence {
+    display: block; /* or inline-block */
+    font-family: 'Patrick Hand', cursive;
+    font-size: 28px; /* Adjust size as needed */
+    color: #4b0082; /* This is just an example color */
+    margin-bottom: 8px; /* Space before the 'No' or 'לא' */
+}
+
 
 /* Counter styles */
 .counter {
