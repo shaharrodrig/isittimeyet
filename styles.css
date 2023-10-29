@@ -73,7 +73,7 @@ p.answer {
 
 .random-en-sentence {
     display: block; /* or inline-block */
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Karantina';
     font-size: 28px; /* Adjust size as needed */
     color: #4b0082; /* This is just an example color */
     margin-bottom: 8px; /* Space before the 'No' or 'לא' */
