@@ -1,6 +1,6 @@
 /* General styling */
 
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alef&family=Arimo&family=Karantina:wght@300&display=swap');
 
 body {
     background-color: #121212;
@@ -81,7 +81,7 @@ p.answer {
 
 .random-he-sentence {
     display: block; /* or inline-block */
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Karantina';
     font-size: 28px; /* Adjust size as needed */
     color: #4b0082; /* This is just an example color */
     margin-bottom: 8px; /* Space before the 'No' or 'לא' */
