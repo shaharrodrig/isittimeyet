@@ -24,12 +24,12 @@
             <h1 class="question">🇮🇱 IS IT TIME YET?  🇮🇱<span class="tooltip"><i class="tooltip-icon">ℹ️</i>
   <span class="tooltiptext">*time to talk politics and replace this abominable government</span>
 </span></h1>            
-          <p class="answer"><span class="random-sentence"></span>No</p>
+          <p class="answer"><span class="random-en-sentence"></span>No</p>
         </div>
         <div class="separator"></div>
         <div class="content" dir="rtl">
             <h1 class="question">🇮🇱 האם זה כבר הזמן? 🇮🇱 <span class="tooltip"><i class="tooltip-icon">ℹ️</i><span class="tooltiptext">*זמן לדבר פוליטיקה ולהחליף את הממשלה</span></h1>
-            <p class="answer"><span class="random-sentence"></span>לא</p>
+            <p class="answer"><span class="random-he-sentence"></span>לא</p>
         </div>
         <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -60,5 +60,29 @@ document.addEventListener("DOMContentLoaded", function () {
 });
     </script>
     </div>
+    <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+    // Example array of random sentences
+    const sentences = [
+        "According to Amit Segal:",
+        "According to Tali Gottlieb:",
+        "According to Sarah Netanyahu:",
+        "According to Yinon Magal:"
+        // Add as many sentences as you like
+    ];
+
+    // Function to get a random sentence
+    function getRandomSentence() {
+        return sentences[Math.floor(Math.random() * sentences.length)];
+    }
+
+    // Set random sentences for all elements with the 'random-en-sentence' class
+    document.querySelectorAll('.random-en-sentence').forEach(function(elem) {
+        elem.textContent = getRandomSentence();
+    });
+});
+</script>
+
 </body>
 </html>
