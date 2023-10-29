@@ -75,7 +75,6 @@ p.answer {
     display: block; /* or inline-block */
     font-family: 'Karantina';
     font-size: 28px; /* Adjust size as needed */
-    color: #4b0082; /* This is just an example color */
     margin-bottom: 8px; /* Space before the 'No' or 'לא' */
 }
 
@@ -83,7 +82,6 @@ p.answer {
     display: block; /* or inline-block */
     font-family: 'Karantina';
     font-size: 28px; /* Adjust size as needed */
-    color: #4b0082; /* This is just an example color */
     margin-bottom: 8px; /* Space before the 'No' or 'לא' */
 }
 
