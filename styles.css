@@ -71,7 +71,15 @@ p.answer {
     margin-left: 5px;
 }
 
-.random-sentence {
+.random-en-sentence {
+    display: block; /* or inline-block */
+    font-family: 'Patrick Hand', cursive;
+    font-size: 28px; /* Adjust size as needed */
+    color: #4b0082; /* This is just an example color */
+    margin-bottom: 8px; /* Space before the 'No' or 'לא' */
+}
+
+.random-he-sentence {
     display: block; /* or inline-block */
     font-family: 'Patrick Hand', cursive;
     font-size: 28px; /* Adjust size as needed */
