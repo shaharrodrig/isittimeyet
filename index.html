@@ -52,10 +52,21 @@
             <p class="answer">👎 לא</p>
         </div>
 
-        <!-- New playful text and dynamic time unit -->
-        <div class="playful-section">
-            <p class="dynamic-time" id="dynamic-time"></p>
-        </div>
+        <!-- Bring Them Home Now ticker -->
+        <div id="bthn" lang="en"></div>
+        <script>
+            (function () {
+                var script = document.createElement("script");
+                script.type = "text/javascript";
+                script.src = "https://bringthemhomenow.net/1.1.0/hostages-ticker.js";
+                script.setAttribute(
+                    "integrity",
+                    "sha384-DHuakkmS4DXvIW79Ttuqjvl95NepBRwfVGx6bmqBJVVwqsosq8hROrydHItKdsne"
+                );
+                script.setAttribute("crossorigin", "anonymous");
+                document.getElementsByTagName("head")[0].appendChild(script);
+            })();
+        </script>
 
     </div>
 
@@ -86,31 +97,6 @@
                     }
                 });
             });
-        });
-    </script>
-
-    <!-- Dynamic clock for time passed since October 7th, 2023 at 06:30 AM (Israel time) -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Set the starting time to October 7th, 2023 at 06:30 AM IL time
-            const startDate = new Date("2023-10-07T03:30:00Z").getTime(); // 03:30 UTC = 06:30 IL time
-            const dynamicTimeElem = document.getElementById('dynamic-time');
-
-            function updateDynamicTime() {
-                const now = new Date().getTime();
-                const timePassed = now - startDate;
-
-                const days = Math.floor(timePassed / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timePassed % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timePassed % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timePassed % (1000)) / 1000);
-
-                dynamicTimeElem.innerHTML = `${days} Days, ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds | ${days} ימים, ${hours} שעות, ${minutes} דקות, ${seconds} שניות`;
-            }
-
-            // Call updateDynamicTime every second
-            updateDynamicTime(); // Initial call to display the counter immediately
-            setInterval(updateDynamicTime, 1000); // Updates every second
         });
     </script>
 
