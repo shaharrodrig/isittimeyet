@@ -1,113 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Is It Time Yet?</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alef&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Alef&family=Arimo&family=Karantina:wght@300&display=swap" rel="stylesheet">
-</head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PH9WHRTRFG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-PH9WHRTRFG');
-</script>
-<body>
-  
-    <div class="container">
-        <img src="https://media.tenor.com/Tba8U7WwZ6IAAAAC/benjamin-netanyahu-%D7%91%D7%A0%D7%99%D7%9E%D7%99%D7%9F%D7%A0%D7%AA%D7%A0%D7%99%D7%94%D7%95.gif" alt="Animated GIF" class="top-gif">
-        <div class="content">
-            <h1 class="question">🇮🇱 IS IT TIME YET?  🇮🇱<span class="tooltip"><i class="tooltip-icon">ℹ️</i>
-  <span class="tooltiptext">*time to talk politics and replace this abominable government</span>
-</span></h1>            
-          <p class="answer"> NOPE 👎 </p>
-        </div>
-        <div class="separator"></div>
-        <div class="content" dir="rtl">
-            <h1 class="question">🇮🇱 האם זה כבר הזמן? 🇮🇱 <span class="tooltip"><i class="tooltip-icon">ℹ️</i><span class="tooltiptext">*זמן לדבר פוליטיקה ולהחליף את הממשלה</span></h1>
-            <p class="answer">👎  לא </p>
-        </div>
-        <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const tooltips = document.querySelectorAll('.tooltip');
-
-    tooltips.forEach((tooltip) => {
-        tooltip.addEventListener('mouseenter', function() {
-            this.querySelector('.tooltiptext').style.visibility = 'visible';
-            this.querySelector('.tooltiptext').style.opacity = 1;
-        });
-
-        tooltip.addEventListener('mouseleave', function() {
-            this.querySelector('.tooltiptext').style.visibility = 'hidden';
-            this.querySelector('.tooltiptext').style.opacity = 0;
-        });
-
-        tooltip.addEventListener('touchstart', function() {
-            const tooltipText = this.querySelector('.tooltiptext');
-            if (tooltipText.style.visibility === 'visible') {
-                tooltipText.style.visibility = 'hidden';
-                tooltipText.style.opacity = 0;
-            } else {
-                tooltipText.style.visibility = 'visible';
-                tooltipText.style.opacity = 1;
-            }
-        });
-    });
-});
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> <!-- Playful font -->
+    <!-- Google Tag Manager -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PH9WHRTRFG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PH9WHRTRFG');
     </script>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Animated GIF at the top -->
+        <img src="https://media.tenor.com/Tba8U7WwZ6IAAAAC/benjamin-netanyahu-%D7%91%D7%A0%D7%99%D7%9E%D7%99%D7%9F%D7%A0%D7%AA%D7%A0%D7%99%D7%94%D7%95.gif" alt="Animated GIF" class="top-gif">
+
+        <!-- English section -->
+        <div class="content">
+            <h1 class="question">🇮🇱 IS IT TIME YET?  🇮🇱
+                <span class="tooltip">
+                    <i class="tooltip-icon">ℹ️</i>
+                    <span class="tooltiptext">*time to talk politics and replace this abominable government</span>
+                </span>
+            </h1>
+            <span class="random-en-sentence"></span> <!-- Random sentence span -->
+            <p class="answer">NOPE 👎</p>
+        </div>
+
+        <div class="separator"></div>
+
+        <!-- Hebrew section -->
+        <div class="content" dir="rtl">
+            <h1 class="question">🇮🇱 האם זה כבר הזמן? 🇮🇱
+                <span class="tooltip">
+                    <i class="tooltip-icon">ℹ️</i>
+                    <span class="tooltiptext">*זמן לדבר פוליטיקה ולהחליף את הממשלה</span>
+                </span>
+            </h1>
+            <span class="random-he-sentence"></span> <!-- Random Hebrew sentence span -->
+            <p class="answer">👎 לא</p>
+        </div>
+
+        <!-- New playful text and dynamic time unit -->
+        <div class="playful-section">
+            <p class="up-to-date">up to date | מעודכן</p>
+            <p class="dynamic-time" id="dynamic-time"></p>
+        </div>
+
     </div>
+
+    <!-- Tooltip functionality for both hover (desktop) and touch (mobile) -->
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tooltips = document.querySelectorAll('.tooltip');
 
-    document.addEventListener("DOMContentLoaded", function() {
-    // Example array of random sentences
-    const sentences = [
-        "According to Amit Segal:",
-        "According to Tali Gottlieb:",
-        "According to Sarah Netanyahu:",
-        "According to Yinon Magal:"
-        // Add as many sentences as you like
-    ];
+            tooltips.forEach((tooltip) => {
+                tooltip.addEventListener('mouseenter', function() {
+                    this.querySelector('.tooltiptext').style.visibility = 'visible';
+                    this.querySelector('.tooltiptext').style.opacity = 1;
+                });
 
-    // Function to get a random sentence
-    function getRandomSentence() {
-        return sentences[Math.floor(Math.random() * sentences.length)];
-    }
+                tooltip.addEventListener('mouseleave', function() {
+                    this.querySelector('.tooltiptext').style.visibility = 'hidden';
+                    this.querySelector('.tooltiptext').style.opacity = 0;
+                });
 
-    // Set random sentences for all elements with the 'random-en-sentence' class
-    document.querySelectorAll('.random-en-sentence').forEach(function(elem) {
-        elem.textContent = getRandomSentence();
-    });
-});
-</script>
+                tooltip.addEventListener('touchstart', function() {
+                    const tooltipText = this.querySelector('.tooltiptext');
+                    if (tooltipText.style.visibility === 'visible') {
+                        tooltipText.style.visibility = 'hidden';
+                        tooltipText.style.opacity = 0;
+                    } else {
+                        tooltipText.style.visibility = 'visible';
+                        tooltipText.style.opacity = 1;
+                    }
+                });
+            });
+        });
+    </script>
 
+    <!-- Dynamic clock for time passed since October 7th, 2023 -->
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const startDate = new Date("October 7, 2023 00:00:00").getTime();
+            const dynamicTimeElem = document.getElementById('dynamic-time');
 
-    document.addEventListener("DOMContentLoaded", function() {
-    // Example array of random sentences
-    const sentences = [
-        "לפי עמית סגל:",
-        "לפי טלי גוטליב:",
-        "לפי שרה נתניהו:",
-        "לפי ינון מגל:"
-        // Add as many sentences as you like
-    ];
+            function updateDynamicTime() {
+                const now = new Date().getTime();
+                const timePassed = now - startDate;
 
-    // Function to get a random sentence
-    function getRandomSentence() {
-        return sentences[Math.floor(Math.random() * sentences.length)];
-    }
+                const days = Math.floor(timePassed / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timePassed % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timePassed % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timePassed % (1000)) / 1000);
 
-    // Set random sentences for all elements with the 'random-he-sentence' class
-    document.querySelectorAll('.random-he-sentence').forEach(function(elem) {
-        elem.textContent = getRandomSentence();
-    });
-});
-</script>
-    
+                dynamicTimeElem.innerHTML = `${days} Days, ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds | ${days} ימים, ${hours} שעות, ${minutes} דקות, ${seconds} שניות`;
+            }
+
+            // Update every second
+            setInterval(updateDynamicTime, 1000);
+        });
+    </script>
+
+    <!-- Random English sentence generator -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sentences = [
+                "According to Amit Segal:",
+                "According to Tali Gottlieb:",
+                "According to Sarah Netanyahu:",
+                "According to Yinon Magal:"
+            ];
+
+            function getRandomSentence() {
+                return sentences[Math.floor(Math.random() * sentences.length)];
+            }
+
+            document.querySelectorAll('.random-en-sentence').forEach(function(elem) {
+                elem.textContent = getRandomSentence();
+            });
+        });
+    </script>
+
+    <!-- Random Hebrew sentence generator -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sentences = [
+                "לפי עמית סגל:",
+                "לפי טלי גוטליב:",
+                "לפי שרה נתניהו:",
+                "לפי ינון מגל:"
+            ];
+
+            function getRandomSentence() {
+                return sentences[Math.floor(Math.random() * sentences.length)];
+            }
+
+            document.querySelectorAll('.random-he-sentence').forEach(function(elem) {
+                elem.textContent = getRandomSentence();
+            });
+        });
+    </script>
+
 </body>
 </html>
