@@ -1,170 +1,33 @@
-/* General styling */
-
-@import url('https://fonts.googleapis.com/css2?family=Alef&family=Arimo&family=Karantina:wght@300&display=swap');
-
-body {
-    background-color: #121212; /* Revert to black background */
-    font-family: 'Alef', sans-serif;
-    color: #ffffff; /* White text */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    text-align: center;
-}
-
-.container {
-    max-width: 800px; /* Max width to match the target design */
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #121212; /* Keep container background the same as the body */
-    box-shadow: none; /* Remove shadow */
-    border-radius: 0; /* Remove border radius for minimalist design */
-}
-
-h1.question {
-    font-size: 4rem; /* Adjusted to be larger */
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #ffffff;
-    animation: fadeIn 2s ease;
-}
-
-p.answer {
-    font-size: 3rem; /* Answer size */
-    color: #ffffff;
-    animation: fadeInAnswers 4s ease;
-}
-
-.random-en-sentence, .random-he-sentence {
-    font-family: 'Karantina', cursive;
-    font-size: 1.5rem; /* Smaller, playful font for sentences */
-    color: #ff0000; /* Red for playful effect */
-    margin-bottom: 10px;
-}
-
-/* Tooltip styles */
-.tooltip {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    opacity: 0;
-    width: 200px;
-    font-size: 1rem; /* Smaller font for tooltip text */
-    background-color: #444;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -100px;
-    transition: opacity 0.3s;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-}
-
-.tooltip-icon {
-    font-size: 14px;
-    color: #aaa;
-    vertical-align: top;
-    margin-left: 5px;
-}
-
-/* Adjust GIF */
-.top-gif {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-/* Counter styles */
-.counter {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    font-size: 1rem;
-    background: none;
-    color: #666; /* Light grey for the counter */
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInAnswers {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Mobile Compatibility */
-@media only screen and (max-width: 768px) {
-    h1.question {
-        font-size: 2.5rem; /* Adjust for mobile */
-    }
-
-    p.answer {
-        font-size: 2rem; /* Adjust for mobile */
-    }
-
-    .random-en-sentence, .random-he-sentence {
-        font-size: 1.2rem; /* Adjust size for mobile */
-    }
-}
-
-@media only screen and (max-width: 320px) {
-    h1.question {
-        font-size: 2rem; /* Adjust for very small screens */
-    }
-
-    p.answer {
-        font-size: 1.8rem;
-    }
-
-    .tooltip .tooltiptext {
-        font-size: 0.9rem; /* Tooltip text for small screens */
-    }
-
-    .tooltip-icon {
-        font-size: 12px;
-    }
-}
-
-/* Playful section styling */
-.playful-section {
-    margin-top: 20px;
-}
-
+/* Glowing up-to-date section at the very top */
 .up-to-date {
-    font-family: 'Indie Flower', cursive; /* Playful font */
+    font-family: 'Indie Flower', cursive;
     font-size: 24px;
-    color: #ff6347; /* You can adjust the color */
+    color: #ff6347; /* Color of your choice */
+    padding: 20px;
+    text-align: center;
+    animation: glow 1.5s infinite; /* Heartbeat animation */
 }
 
+/* Glow animation */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #ff6347, 0 0 10px #ff6347, 0 0 15px #ff6347, 0 0 20px #ff6347;
+        transform: scale(1);
+    }
+    50% {
+        text-shadow: 0 0 20px #ff4500, 0 0 30px #ff4500, 0 0 40px #ff4500;
+        transform: scale(1.1);
+    }
+    100% {
+        text-shadow: 0 0 5px #ff6347, 0 0 10px #ff6347, 0 0 15px #ff6347, 0 0 20px #ff6347;
+        transform: scale(1);
+    }
+}
+
+/* Dynamic time section */
 .dynamic-time {
-    font-family: 'Indie Flower', cursive; /* Playful font */
+    font-family: 'Indie Flower', cursive;
     font-size: 20px;
     color: #ff6347; /* You can adjust the color */
+    text-align: center;
 }
