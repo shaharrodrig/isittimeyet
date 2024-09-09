@@ -151,3 +151,20 @@ p.answer {
         font-size: 12px;
     }
 }
+
+/* Playful section styling */
+.playful-section {
+    margin-top: 20px;
+}
+
+.up-to-date {
+    font-family: 'Indie Flower', cursive; /* Playful font */
+    font-size: 24px;
+    color: #ff6347; /* You can adjust the color */
+}
+
+.dynamic-time {
+    font-family: 'Indie Flower', cursive; /* Playful font */
+    font-size: 20px;
+    color: #ff6347; /* You can adjust the color */
+}
