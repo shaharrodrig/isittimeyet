@@ -3,9 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Alef&family=Arimo&family=Karantina:wght@300&display=swap');
 
 body {
-    background-color: #ffffff; /* Set to white like the reference site */
-    font-family: 'Alef', sans-serif; 
-    color: #000; /* Set text to black */
+    background-color: #121212; /* Revert to black background */
+    font-family: 'Alef', sans-serif;
+    color: #ffffff; /* White text */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,9 +17,9 @@ body {
 .container {
     max-width: 800px; /* Max width to match the target design */
     margin: 0 auto;
-    padding: 20px; /* Add padding to center the content */
-    background-color: #ffffff;
-    box-shadow: none; /* Remove shadow for a cleaner look */
+    padding: 20px;
+    background-color: #121212; /* Keep container background the same as the body */
+    box-shadow: none; /* Remove shadow */
     border-radius: 0; /* Remove border radius for minimalist design */
 }
 
@@ -27,20 +27,20 @@ h1.question {
     font-size: 4rem; /* Adjusted to be larger */
     font-weight: bold;
     margin-bottom: 20px;
-    color: #000000;
+    color: #ffffff;
     animation: fadeIn 2s ease;
 }
 
 p.answer {
     font-size: 3rem; /* Answer size */
-    color: #000000;
+    color: #ffffff;
     animation: fadeInAnswers 4s ease;
 }
 
 .random-en-sentence, .random-he-sentence {
     font-family: 'Karantina', cursive;
     font-size: 1.5rem; /* Smaller, playful font for sentences */
-    color: #ff0000; /* Red to emphasize the playful style */
+    color: #ff0000; /* Red for playful effect */
     margin-bottom: 10px;
 }
 
@@ -95,7 +95,7 @@ p.answer {
     right: 10px;
     font-size: 1rem;
     background: none;
-    color: #666;
+    color: #666; /* Light grey for the counter */
 }
 
 /* Animations */
