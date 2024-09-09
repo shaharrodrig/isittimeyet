@@ -23,6 +23,7 @@ body {
     background-color: #121212;
     box-shadow: none;
     border-radius: 0;
+    padding-bottom: 120px; /* Add enough padding at the bottom */
 }
 
 h1.question {
