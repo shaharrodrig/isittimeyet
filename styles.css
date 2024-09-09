@@ -89,9 +89,10 @@ p.answer {
     font-family: 'Indie Flower', cursive;
     font-size: 24px;
     color: #ff6347; /* Color of your choice */
-    padding: 10px;
+    padding: 100px;
     position: relative; /* Changed from fixed to relative */
     margin-bottom: 40px; /* Add margin to ensure space between up-to-date and gif */
+    margin-top: 40px; /* Add margin to ensure space between up-to-date and gif */
     z-index: 1000;
     animation: glow 1.5s infinite;
 }
@@ -110,6 +111,14 @@ p.answer {
         text-shadow: 0 0 5px #ff6347, 0 0 10px #ff6347, 0 0 15px #ff6347, 0 0 20px #ff6347;
         transform: scale(1);
     }
+}
+
+/* Styling for 'According to' sentences */
+.random-en-sentence, .random-he-sentence {
+    font-family: 'Karantina', cursive; /* Playful Karantina font */
+    font-size: 32px;
+    color: #ff0000; /* Red color */
+    margin-bottom: 8px;
 }
 
 /* Dynamic time section */
@@ -162,7 +171,7 @@ p.answer {
     }
 
     .random-en-sentence, .random-he-sentence {
-        font-size: 1.2rem;
+        font-size: 1.5rem; /* Adjust size for mobile */
     }
 
     .up-to-date {
