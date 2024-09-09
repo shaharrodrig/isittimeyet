@@ -9,6 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column; /* Ensure the layout is vertical */
     height: 100vh;
     margin: 0;
     text-align: center;
@@ -16,7 +17,7 @@ body {
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
+    margin-top: 100px; /* Added margin to push content below "Up to date" */
     padding: 20px;
     background-color: #121212;
     box-shadow: none;
@@ -81,13 +82,18 @@ p.answer {
     margin-bottom: 20px;
 }
 
-/* Glowing up-to-date section at the very top */
+/* Glowing up-to-date section fixed to the top */
 .up-to-date {
     font-family: 'Indie Flower', cursive;
     font-size: 24px;
     color: #ff6347; /* Color of your choice */
-    padding: 20px;
-    text-align: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #121212;
+    z-index: 1000; /* Ensures it's on top of other content */
     animation: glow 1.5s infinite; /* Heartbeat animation */
 }
 
@@ -159,6 +165,10 @@ p.answer {
     .random-en-sentence, .random-he-sentence {
         font-size: 1.2rem;
     }
+
+    .up-to-date {
+        font-size: 18px; /* Adjust size for mobile */
+    }
 }
 
 @media only screen and (max-width: 320px) {
@@ -176,5 +186,9 @@ p.answer {
 
     .tooltip-icon {
         font-size: 12px;
+    }
+
+    .up-to-date {
+        font-size: 16px; /* Further adjust for very small screens */
     }
 }
