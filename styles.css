@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Ensure the layout is vertical */
+    flex-direction: column;
     height: 100vh;
     margin: 0;
     text-align: center;
@@ -17,7 +17,8 @@ body {
 
 .container {
     max-width: 800px;
-    margin-top: 100px; /* Added margin to push content below "Up to date" */
+    padding-top: 60px; /* Add padding to avoid overlap with the 'Up to date' */
+    margin-top: 60px; /* Ensure container starts lower */
     padding: 20px;
     background-color: #121212;
     box-shadow: none;
@@ -88,13 +89,10 @@ p.answer {
     font-size: 24px;
     color: #ff6347; /* Color of your choice */
     padding: 10px;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #121212;
-    z-index: 1000; /* Ensures it's on top of other content */
-    animation: glow 1.5s infinite; /* Heartbeat animation */
+    position: relative; /* Changed from fixed to relative */
+    margin-bottom: 40px; /* Add margin to ensure space between up-to-date and gif */
+    z-index: 1000;
+    animation: glow 1.5s infinite;
 }
 
 /* Glow animation */
@@ -117,7 +115,7 @@ p.answer {
 .dynamic-time {
     font-family: 'Indie Flower', cursive;
     font-size: 20px;
-    color: #ff6347; /* You can adjust the color */
+    color: #ff6347;
     text-align: center;
 }
 
@@ -128,7 +126,7 @@ p.answer {
     right: 10px;
     font-size: 1rem;
     background: none;
-    color: #666; /* Light grey for the counter */
+    color: #666;
 }
 
 /* Animations */
@@ -167,7 +165,7 @@ p.answer {
     }
 
     .up-to-date {
-        font-size: 18px; /* Adjust size for mobile */
+        font-size: 18px;
     }
 }
 
@@ -189,6 +187,6 @@ p.answer {
     }
 
     .up-to-date {
-        font-size: 16px; /* Further adjust for very small screens */
+        font-size: 16px;
     }
 }
